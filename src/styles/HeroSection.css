@@ -1,0 +1,113 @@
+.hero-section {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  padding: 3rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  max-width: 950px;
+  margin: 3rem auto;
+  border: 1.5px solid #ffd1dc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  width: 100%;
+  justify-content: center;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-photo {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 35%; /* Focus on face */
+  border: 4px solid #ffd1dc;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.22);
+  background: #fff;
+  transition: transform 0.3s;
+}
+.hero-photo:hover {
+  transform: scale(1.04) rotate(-2deg);
+}
+
+.hero-text {
+  flex: 1 1 0;
+  text-align: left;
+  min-width: 0;
+}
+
+.hero-section h1 {
+  font-family: 'Playfair Display', serif;
+  color: #8b008b;
+  font-size: 3.2rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.hero-section p {
+  font-size: 1.35rem;
+  line-height: 2.1;
+  color: #444;
+  margin-bottom: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.cta-row {
+  margin: 2rem 0 0 0;
+  text-align: left;
+}
+
+.heart-pulse {
+  font-size: 3.2rem;
+  color: #ff3366;
+  animation: pulse 2s infinite;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+  .hero-photo {
+    width: 180px;
+    height: 180px;
+  }
+  .hero-section {
+    padding: 1.2rem 0.3rem;
+    max-width: 98vw;
+  }
+  .hero-text {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 1.3rem;
+  }
+  .hero-section p {
+    font-size: 0.98rem;
+  }
+  .hero-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .hero-section {
+    padding: 0.5rem 0.1rem;
+    border-radius: 1rem;
+  }
+}

@@ -1,0 +1,92 @@
+.quiz-container {
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(8px);
+  padding: 2.8rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px rgba(255, 105, 180, 0.13), 0 1.5px 0 #ffd1dc;
+  max-width: 600px;
+  width: 100%;
+  border: 2px solid #ffd1dc;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 0 auto;
+  position: relative;
+}
+
+.quiz-container:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 12px 36px rgba(255, 105, 180, 0.18);
+}
+
+.quiz-progress {
+  height: 10px;
+  background: #ffe4ec;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(255, 105, 180, 0.08);
+}
+
+.quiz-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #ff69b4 0%, #ffd1dc 100%);
+  transition: width 0.3s;
+}
+
+.quiz-container h2 {
+  font-family: 'Playfair Display', serif;
+  color: #8b008b;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+
+.quiz-container p {
+  font-size: 1.18rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+.quiz-container button {
+  background: linear-gradient(90deg, #ffe4e1 0%, #ffd1dc 100%);
+  color: #8b008b;
+  border: none;
+  padding: 0.9rem 1.2rem;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.13rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.08);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz-container button:hover {
+  background: linear-gradient(90deg, #ffccd5 0%, #ffe4ec 100%);
+  transform: scale(1.04);
+  box-shadow: 0 4px 16px rgba(255, 105, 180, 0.13);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 1.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 0.7rem 0.1rem;
+    border-radius: 1rem;
+    max-width: 98vw;
+  }
+  .quiz-container h2 {
+    font-size: 1.1rem;
+  }
+  .quiz-container p {
+    font-size: 0.95rem;
+  }
+  .quiz-container button {
+    font-size: 0.98rem;
+    padding: 0.6rem 0.5rem;
+  }
+}

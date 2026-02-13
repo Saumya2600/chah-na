@@ -1,0 +1,117 @@
+.comparison-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #ffd1dc;
+    transition: transform 0.3s;
+  }
+  
+  .comparison-container:hover {
+    transform: translateY(-8px);
+  }
+  
+  .comparison-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: #8b008b;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .comparison-container p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .comparison-option {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .comparison-option img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #ffd1dc;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .comparison-option button {
+    background: #ffe4e1;
+    color: #8b008b;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .comparison-option button:hover {
+    background: #ffccd5;
+    transform: scale(1.03);
+  }
+  
+  .comparison-message {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #8b008b;
+    text-align: center;
+    min-height: 2.5em;
+    z-index: 2;
+    position: relative;
+  }
+
+  .comparison-card {
+    margin-bottom: 2.5rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .comparison-container {
+      padding: 1.5rem;
+    }
+  
+    .comparison-option img {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .comparison-option button {
+      max-width: 250px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .comparison-card {
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 0.7rem 0.1rem;
+      border-radius: 1rem;
+      max-width: 98vw;
+    }
+    .comparison-card img {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .comparison-message {
+      font-size: 1rem;
+      padding: 0.5rem 0.2rem;
+    }
+  }
