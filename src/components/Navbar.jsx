@@ -5,6 +5,7 @@ import '../styles/Navbar.css';
 
 function Navbar() {
   const [showLoveMsg, setShowLoveMsg] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleHeartClick = () => {
     setShowLoveMsg(true);
@@ -14,6 +15,14 @@ function Navbar() {
     setShowLoveMsg(false);
   };
 
+  const handleHamburger = () => {
+    setMobileOpen((open) => !open);
+  };
+
+  const handleNavLinkClick = () => {
+    setMobileOpen(false);
+  };
+
   return (
     <>
       <nav className="navbar">
@@ -21,15 +30,20 @@ function Navbar() {
           <div className="navbar-logo" style={{ cursor: 'pointer' }} onClick={handleHeartClick}>
             <img src={logo} alt="Love Logo" />
           </div>
-          <ul>
+          <div className="navbar-hamburger" onClick={handleHamburger}>
+            <span style={{ transform: mobileOpen ? 'rotate(45deg) translate(6px, 6px)' : 'none' }}></span>
+            <span style={{ opacity: mobileOpen ? 0 : 1 }}></span>
+            <span style={{ transform: mobileOpen ? 'rotate(-45deg) translate(7px, -7px)' : 'none' }}></span>
+          </div>
+          <ul className={mobileOpen ? 'navbar-mobile-open' : ''}>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/" onClick={handleNavLinkClick}>Home</Link>
             </li>
             <li>
-              <Link to="/comparison">Comparison Game</Link>
+              <Link to="/comparison" onClick={handleNavLinkClick}>Comparison Game</Link>
             </li>
             <li>
-              <Link to="/promise">My Promise</Link>
+              <Link to="/promise" onClick={handleNavLinkClick}>My Promise</Link>
             </li>
           </ul>
         </div>
