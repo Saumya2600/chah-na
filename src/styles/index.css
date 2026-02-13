@@ -6,12 +6,13 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(120deg, #fffaf0 0%, #ffe4ec 100%);
+  background: linear-gradient(120deg, #fffaf0 0%, #ffe4ec 50%, #ffd1dc 100%);
   min-height: 100vh;
   color: #333;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-shadow: 0 0 120px 0 #ffd1dc55 inset;
 }
 
 .app-container {
@@ -56,8 +57,9 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255,255,255,0.7) 0%, rgba(255,228,236,0.5) 100%);
+  background: linear-gradient(120deg, rgba(255,228,236,0.7) 0%, rgba(255,209,220,0.4) 100%);
   z-index: -1;
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
