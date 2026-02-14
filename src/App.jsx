@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Analytics } from "@vercel/analytics/react"
 import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,6 +8,9 @@ import Promise from './pages/Promise';
 
 function App() {
   return (
+    <>
+    <Analytics />
+    
     <div className="app-container">
       <Navbar />
       <Routes>
@@ -16,6 +20,7 @@ function App() {
       </Routes>
       {/* <Footer /> */}
     </div>
+    </>
   );
 }
 
